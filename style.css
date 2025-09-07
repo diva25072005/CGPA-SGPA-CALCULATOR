@@ -1,0 +1,122 @@
+/* Reset default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Body styling */
+body {
+    background: linear-gradient(135deg, #6a11cb, #2575fc);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    padding: 20px;
+}
+
+/* Container card */
+.container {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(15px);
+    border-radius: 20px;
+    padding: 40px;
+    max-width: 600px;
+    width: 100%;
+    text-align: center;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Title */
+.container h1 {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+}
+
+/* Top form: label, input, buttons */
+.top-form {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+/* Input fields */
+input[type="number"],
+input[type="text"],
+select {
+    padding: 8px;
+    border-radius: 8px;
+    border: none;
+    min-width: 120px;
+}
+
+/* Subject input rows */
+.form-group {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 15px;
+    flex-wrap: wrap;
+}
+
+/* Buttons */
+button, .btn {
+    display: inline-block;
+    padding: 12px 20px;
+    font-size: 1rem;
+    color: #fff;
+    background: linear-gradient(135deg, #ff512f, #dd2476);
+    text-decoration: none;
+    border-radius: 10px;
+    transition: 0.3s ease;
+    font-weight: 600;
+    margin: 5px;
+    cursor: pointer;
+}
+
+button:hover, .btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* SGPA/CGPA result */
+#result, #cgpa-result {
+    margin-top: 20px;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+    .container {
+        padding: 30px 20px;
+    }
+
+    .container h1 {
+        font-size: 1.5rem;
+    }
+
+    input[type="number"],
+    input[type="text"],
+    select {
+        width: 100%;
+    }
+    .form-group {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .top-form {
+        flex-direction: column;
+        align-items: center;
+    }
+}
